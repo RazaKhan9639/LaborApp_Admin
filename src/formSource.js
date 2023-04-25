@@ -57,35 +57,80 @@ export const userInput = [
     
 ]
 
-export const productInputs = [
+export const LaborInputs = [
     {
         id:1,
-        label:"Title",
+        label:"Name",
         type:"text",
-        placeholder:"Macbook Pro",
+        placeholder:"Raza Mohayyuddin",
     },
     {
         id:2,
-        label:"Description",
+        label:"Email",
         type:"text",
-        placeholder:"Macbook Pro 13 inch",
+        placeholder:"abc@gmail.com",
     },
     {
         id:3,
-        label:"Category",
+        label:"Identity Card",
         type:"text",
-        placeholder:"Laptop",
+        placeholder:"123456789",
     },
     {
         id:4,
-        label:"Price",
+        label:"City",
         type:"text",
-        placeholder:"$1000",
+        placeholder:"Lahore",
     },
     {
         id:5,
-        label:"Stock",
+        label:"Address",
         type:"text",
-        placeholder:"In stock",
+        placeholder:"House no 123, Street no 123, Lahore",
     },
+    {
+        id:6,
+        label:"Phone",
+        type:"text",
+        placeholder:"123456789",
+    },
+    {
+        id:7,
+        label:"Experience",
+        type:"text",
+        placeholder:"2 years",
+    },
+    {
+        id:8,
+        label:"Service",
+        type:"text",
+        placeholder:"Cleaning",
+    },
+    {
+        id:9,
+        label:"Service Categories",
+        type:"text",
+        placeholder:"House Cleaning",
+    },
+    {
+        id:10,
+        label:"Description",
+        type:"text",
+        placeholder:"I am a good cleaner",
+    },
+    {
+        id:11,
+        label:"Zip Code",
+        type:"text",
+        placeholder:"12345",
+    },
+    {
+        id:12,
+        label:"Per Hour Rate",
+        type:"text",
+        placeholder:"$10",
+    }
+
+
+
 ]

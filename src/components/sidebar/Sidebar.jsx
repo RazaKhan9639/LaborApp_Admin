@@ -3,7 +3,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+//import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
@@ -29,10 +29,12 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
+          <Link to="/" style={{textDecoration:"none"}}>
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
+          </Link>
           <p className="title">LIST</p>
           <Link to="/users" style={{textDecoration:"none"}}>
           <li>
@@ -40,24 +42,24 @@ const Sidebar = () => {
             <span>Users</span>
           </li>
           </Link>
-          <Link to="/products" style={{textDecoration:"none"}}>
+          <Link to="/labour" style={{textDecoration:"none"}}>
           <li>
             <StorefrontOutlinedIcon className="icon" />
-            <span>Products</span>
+            <span>Service Providers</span>
           </li>
           </Link>
           <li>
             <LocalAtmOutlinedIcon className="icon" />
             <span>Orders</span>
           </li>
-          <li>
+          {/* <li>
             <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
+            <span>Order Status</span>
+          </li> */}
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />
-            <span>Stats</span>
+            <span>Services</span>
           </li>
           <li>
             <NotificationsActiveIcon className="icon" />

@@ -5,7 +5,7 @@ import List from "./pages/list/List";
 import Login from "./pages/login/Login";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import { productInputs, userInput } from "./formSource";
+import { LaborInputs, userInput } from "./formSource";
 import "./style/dark.scss"
 import  {DarkModeContext}  from "./context/darkModeContext";
 function App() {
@@ -23,10 +23,10 @@ const { darkMode} = useContext(DarkModeContext);
               <Route path=":userId" element={<Single />} />
               <Route path="new" element={<New inputs={userInput} title="Add New User"/>} />
             </Route>
-            <Route path="products">
+            <Route path="labour">
               <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route path="new" element={<New inputs={productInputs} title="Add New Product"/>} />
+              <Route path=":labourId" element={<Single />} />
+              <Route path="new" element={<New inputs={LaborInputs} title="Add New Service Provider"/>} />
             </Route>
           </Route>
         </Routes>
