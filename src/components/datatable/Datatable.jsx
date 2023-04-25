@@ -4,7 +4,7 @@ import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Datatable = () => {
+const Datatable = ({title,active}) => {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -35,18 +35,32 @@ const Datatable = () => {
   ];
   return (
     <div className="datatable">
+
+      {
+        active === "users" ? (
+      
       <div className="datatableTitle">
-        Add New User
+       
+        {title}
         <Link to="/users/new" className="link">
           Add New
         </Link>
       </div>
+      ) : (
+        <div className="datatableTitle">
+          {title}
+          <Link to="/labour/new" className="link">
+            Add New
+          </Link>
+        </div>
+      )
+    }
       <DataGrid
         className="datagrid"
         rows={data}
         columns={userColumns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[6]}
+        pageSize={10}
+        rowsPerPageOptions={[9]}
         checkboxSelection
       />
     </div>

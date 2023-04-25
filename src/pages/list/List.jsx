@@ -5,12 +5,32 @@ import Navbar from "./../../components/navbar/Navbar";
 import Datatable from "../../components/datatable/Datatable";
 
 const List = () => {
+  let title = [];
+  let link = [];
+  let active = "";
+
+  switch (window.location.pathname) {
+    case "/users":
+      title = ["Add New Users"];
+      active = "users";
+      break;
+    case "/labour":
+      title = ["Add New Service Provider"];
+      active = "labour";
+      break;
+      default:
+        break;
+
+  }
+
+
+
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable />
+        <Datatable title={title} link = {link} active = {active}/>
       </div>
     </div>
   );
