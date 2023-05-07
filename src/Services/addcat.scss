@@ -1,0 +1,132 @@
+.add-category {
+  margin: 2rem auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #3a396b;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #dcdcdc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      background-color: #ac2132;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #871722;
+      }
+    }
+
+    
+   
+
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    padding: 0;
+    width: 60%;
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 1rem;
+      width: 60%;
+      padding: 0.5rem;
+      border: 1px solid #dcdcdc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      button{
+        font-size: 1rem;
+        color: #ac2132;
+        border: 1px solid #ac2132;
+        padding: 3px 10px;
+        border-radius: 5px;
+        background-color: transparent;
+
+        cursor: pointer;
+
+        &:hover{
+          background-color: #ac2132;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // Media queries for responsive design
+
+  @media screen and (min-width: 576px) {
+    form {
+      width: 80%;
+    }
+    ul{
+      width: 80%;
+      li{
+        width: 80%;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 992px) {
+    margin: 4rem auto;
+    max-width: 800px;
+
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      width: 50%;
+
+      input[type="text"] {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  ul{
+    width: 60%;
+    li{
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+const services = [
+  //Home services
+  {
+    id: 1,
+    name: "Cleaning",
+    description: "We provide cleaning services for your home",
+    price: 100,
+    image: "https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&w=600",
+    category: "home",
+    categories: [
+        "Ac Repairing",
+        "Gas Filling",
+        "Ac fitting",
+        "Ac Cleaning",
+        "Ac Replacement"
+      ],
+    rating: 4.5,
+    reviews: 100,
+    deliveryTime: 2,
+    deliveryCharge: 0,
+    isAvailable: true,
+    isPopular: true,
+    isRecommended: true,
+  },
+  {
+    id: 2,
+    name: "Plumbing",
+    description: "We provide plumbing services for your home",
+    price: 100,
+    image: "",
+    category: "home",
+    categories: [
+        "Ac Repairing",
+        "Gas Filling",
+        "Ac fitting",
+        "Ac Cleaning",
+        "Ac Replacement"
+      ],
+    rating: 4.5,
+    reviews: 100,
+    deliveryTime: 2,
+    deliveryCharge: 0,
+    isAvailable: true,
+    isPopular: true,
+    isRecommended: true,
+  },
+  {
+    id: 3,
+    name: "Electrician",
+    description: "We provide electrician services for your home",
+    price: 100,
+    image: "",
+    category: "home",
+    categories: [
+        "Ac Repairing",
+        "Gas Filling",
+        "Ac fitting",
+        "Ac Cleaning",
+        "Ac Replacement"
+      ],
+    rating: 4.5,
+    reviews: 100,
+    deliveryTime: 2,
+    deliveryCharge: 0,
+    isAvailable: true,
+    isPopular: true,
+    isRecommended: true,
+  },
+  {
+    id: 4,
+    name: "Carpenter",
+    description: "We provide carpenter services for your home",
+    price: 100,
+    image: "",
+    category: "home",
+    categories: [
+        "Ac Repairing",
+        "Gas Filling",
+        "Ac fitting",
+        "Ac Cleaning",
+        "Ac Replacement"
+      ],
+    rating: 4.5,
+    reviews: 100,
+    deliveryTime: 2,
+    deliveryCharge: 0,
+    isAvailable: true,
+    isPopular: true,
+    isRecommended: true,
+  },
+];
+
+export default services;
