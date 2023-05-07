@@ -1,0 +1,76 @@
+.create-service {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    .back-button{
+        background-color: #3a3b6a;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+        &:hover {
+            background-color: #ac2132;
+        }
+    }
+
+
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #5a6baa;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #5a6baa;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: 1px solid #ac2132;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        select {
+            height: 120px;
+            overflow-y: scroll;
+            color: #5a6baa;
+
+
+        }
+
+        button[type="submit"] {
+            background-color: #3a3b6a;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #ac2132;
+            }
+        }
+    }
+}

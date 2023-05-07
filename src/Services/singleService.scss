@@ -1,0 +1,211 @@
+// .service-details {
+//   padding: 2rem;
+//   background-color: lightgray;
+//   height: 100vh;
+
+//   h1 {
+//     font-size: 1rem;
+//     margin-bottom: 1rem;
+//     color:#3a396b;
+//   }
+
+//   p {
+//     font-size: 1.2rem;
+//     margin-bottom: 1rem;
+//     color:#5b6baa;
+//   }
+
+//   .categories {
+//     margin-top: 2rem;
+
+//     span {
+//       display: inline-block;
+//       padding: 0.5rem 1rem;
+//       margin-right: 1rem;
+//       margin-bottom: 1rem;
+//       font-size: 1.2rem;
+//       background-color: #ac2132;
+//       border-radius: 0.5rem;
+//     }
+//   }
+
+//   // Media queries for responsive design
+
+//   @media screen and (min-width: 576px) {
+//     padding: 4rem;
+
+//     h1 {
+//       font-size: 3rem;
+//     }
+
+//     p {
+//       font-size: 1.5rem;
+//     }
+
+//     .categories {
+//       margin-top: 3rem;
+
+//       span {
+//         font-size: 1.5rem;
+//         padding: 0.7rem 1.5rem;
+//         margin-right: 2rem;
+//         margin-bottom: 2rem;
+//         border-radius: 0.7rem;
+//       }
+//     }
+//   }
+
+//   @media screen and (min-width: 992px) {
+//     padding: 6rem;
+
+//     h1 {
+//       font-size: 2rem;
+//     }
+
+//     p {
+//       font-size: 1rem;
+//     }
+
+//     .categories {
+//       margin-top: 4rem;
+
+//       span {
+//         font-size: 1rem;
+//         padding: 0.5rem 2rem;
+//         margin-right: 1rem;
+//         margin-bottom: 3rem;
+//         border-radius: 5px;
+//       }
+//     }
+//   }
+// }
+
+.service-details {
+  padding: 2rem;
+  background-color: #f4f4f4;
+
+  h1 {
+    font-size: 2rem;
+    color: #3a396b;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #5b6baa;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .categories {
+    margin-top: 2rem;
+
+    span {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      background-color: #ac2132;
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .availability {
+    color: #5b6baa;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+    &.available {
+      color: #008000;
+    }
+
+    &.not-available {
+      color: #ff0000;
+    }
+  }
+
+  .popular {
+    color: #5b6baa;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+    &.yes {
+      color: #008000;
+    }
+
+    &.no {
+      color: #ff0000;
+    }
+  }
+
+  .recommended {
+    color: #5b6baa;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+    &.yes {
+      color: #008000;
+    }
+
+    &.no {
+      color: #ff0000;
+    }
+  }
+
+  // Media queries for responsive design
+
+  @media screen and (min-width: 576px) {
+    padding: 4rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .categories {
+      margin-top: 3rem;
+
+      span {
+        font-size: 1.5rem;
+        padding: 0.7rem 1.5rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.7rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    padding: 6rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .categories {
+      margin-top: 4rem;
+
+      span {
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+        margin-right: 1rem;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+

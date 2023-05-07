@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to="/" style={{textDecoration:"none"}}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">laboradmin</span>
         </Link>
       </div>
@@ -29,24 +29,24 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <Link to="/" style={{textDecoration:"none"}}>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
           </Link>
           <p className="title">LIST</p>
-          <Link to="/users" style={{textDecoration:"none"}}>
-          <li>
-            <PersonOutlineOutlinedIcon className="icon" />
-            <span>Users</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineOutlinedIcon className="icon" />
+              <span>Users</span>
+            </li>
           </Link>
-          <Link to="/labour" style={{textDecoration:"none"}}>
-          <li>
-            <StorefrontOutlinedIcon className="icon" />
-            <span>Service Providers</span>
-          </li>
+          <Link to="/labour" style={{ textDecoration: "none" }}>
+            <li>
+              <StorefrontOutlinedIcon className="icon" />
+              <span>Service Providers</span>
+            </li>
           </Link>
           <li>
             <LocalAtmOutlinedIcon className="icon" />
@@ -57,10 +57,13 @@ const Sidebar = () => {
             <span>Order Status</span>
           </li> */}
           <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Services</span>
-          </li>
+          <Link to="/services" style={{ textDecoration: "none" }}>
+            <li>
+              <InsertChartIcon className="icon" />
+              <span>Services</span>
+            </li>
+          </Link>
+
           <li>
             <NotificationsActiveIcon className="icon" />
             <span>Notifications</span>
@@ -90,8 +93,14 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption" onClick={()=>dispatch({type:"LIGHT"})}></div>
-        <div className="colorOption" onClick={()=>dispatch({type:"DARK"})}></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );
