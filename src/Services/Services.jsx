@@ -69,19 +69,27 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./services.scss";
 import data from "./../servicesData";
-
+import {useNavigate} from "react-router-dom";
 function Services() {
   const [services, setServices] = useState(data);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("/api/services").then((response) => {
       setServices(response.data);
     });
   }, []);
+  const handleClick=()=>{
+    navigate("/");
+  }
 
   return (
     <div className="services">
+      <button  onClick={handleClick} style={{background:'#ac2132',color:'#fff',padding:"10px 30px",borderRadius:'5px',border:'none',marginTop:"2rem",marginLeft:'0.5rem',cursor:'pointer',fontSize:'16px'}}>Back</button>
+      <div className="serviceHeader" style={{display:'flex',alignItems:'center',justifyContent:"center",gap:"5rem"}}>
+      
       <h1>Services</h1>
+      </div>
       <Link to="/services/createService" style={{ marginLeft: "8px" }}>
         Add New Service
       </Link>
