@@ -18,35 +18,18 @@ function CreateService() {
     setCategories([]);
   };
 
-  // const handleCategoryChange = (event) => {
-  //   const category = event.target.value;
-  //   setCategories((prevCategories) => [...prevCategories, { name: category }]);
-  // };
-
-  const handleCategoryChange = (event) => {
-    const category = event.target.value;
-    const subcategory = event.target.getAttribute("data-subcategory");
-
-    // check if the category already exists in the categories array
-    const existingCategory = categories.find((c) => c.name === category);
-
-    if (existingCategory) {
-      // if the category already exists, add the subcategory to its subcategories array
-      setCategories((prevCategories) =>
-        prevCategories.map((c) =>
-          c.name === category
-            ? { ...c, subcategories: [...c.subcategories, subcategory] }
-            : c
-        )
-      );
-    } else {
-      // if the category doesn't exist, add it to the categories array with the subcategory
-      setCategories((prevCategories) => [
-        ...prevCategories,
-        { name: category, subcategories: [subcategory] },
-      ]);
-    }
+  const addCategory = () => {
+    const category = document.querySelector(".categoriesClass").value;
+    setCategories([...categories, category]);
+    document.querySelector(".categoriesClass").value = "";
+    console.log(categories);
   };
+
+  const removeCategory = (category) => {
+    const newCategories = categories.filter((c) => c !== category);
+    setCategories(newCategories);
+  };
+
   return (
     <>
       <Navbar />
@@ -82,10 +65,10 @@ function CreateService() {
             />
           </label>
           <br />
-          <label>
+          {/* <label>
             Image:
             <input type="file" />
-          </label>
+          </label> */}
           <label>
             Delivery Time/ Days:
             <input type="number" min="1" max="3" />
@@ -93,32 +76,22 @@ function CreateService() {
           <br />
           <label>
             Categories:
-            <select multiple onChange={handleCategoryChange}>
-              <option value="Plumbing" data-subcategory="Sink Repair">
-                Plumbing - Sink Repair
-              </option>
-              <option value="Plumbing" data-subcategory="Pipe Cleaning">
-                Plumbing - Pipe Cleaning
-              </option>
-              <option value="Electrical" data-subcategory="Wiring">
-                Electrical - Wiring
-              </option>
-              <option value="Electrical" data-subcategory="Fuse Replacement">
-                Electrical - Fuse Replacement
-              </option>
-              <option value="Carpentry" data-subcategory="Furniture Repair">
-                Carpentry - Furniture Repair
-              </option>
-              <option value="Carpentry" data-subcategory="Door Installation">
-                Carpentry - Door Installation
-              </option>
-              <option value="Cleaning" data-subcategory="House Cleaning">
-                Cleaning - House Cleaning
-              </option>
-              <option value="Cleaning" data-subcategory="Carpet Cleaning">
-                Cleaning - Carpet Cleaning
-              </option>
-            </select>
+            <input
+              type="text"
+              className="categoriesClass"
+              placeholder="Add Categories here "
+            />
+            <button onClick={addCategory}>Add</button>
+            <div className="categories">
+              {categories.map((category) => (
+                <div className="category" key={category}>
+                  <span>{category}</span>
+                  <button onClick={() => removeCategory(category)}>
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </div>
           </label>
           <br />
           <button type="submit">Create Service</button>
